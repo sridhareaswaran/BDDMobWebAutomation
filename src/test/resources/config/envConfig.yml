@@ -1,0 +1,40 @@
+---
+######
+# QA #
+######
+QA:
+  AppURL: www.google.com
+  Eamil: test777@gmail.com
+  Password: testpwd
+
+###########
+# Staging #
+###########
+STG:
+  AppURL: www.google.com
+  Eamil: test777@gmail.com
+  Password: testpwd
+
+###############
+# Integration #
+###############
+INT:
+  AppURL: www.google.com
+  Eamil: test777@gmail.com
+  Password: testpwd
+
+#######
+# DEV #
+#######
+DEV:
+  AppURL: www.google.com
+  Eamil: test777@gmail.com
+  Password: testpwd
+
+########
+# PROD #
+########
+PROD:
+  AppURL: www.google.com
+  Eamil: test777@gmail.com
+  Password: testpwd

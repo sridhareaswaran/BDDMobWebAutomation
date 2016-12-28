@@ -1,0 +1,40 @@
+---
+######
+# QA #
+######
+QA:
+  AppURL: www.google.com
+  Eamil: emailtestlotto777@gmail.com
+  Password: pch78963
+
+###########
+# Staging #
+###########
+STG:
+  AppURL: www.google.com
+  Eamil: emailtestlotto777@gmail.com
+  Password: pch78963
+
+###############
+# Integration #
+###############
+INT:
+  AppURL: www.google.com
+  Eamil: emailtestlotto777@gmail.com
+  Password: pch78963
+
+#######
+# DEV #
+#######
+DEV:
+  AppURL: www.google.com
+  Eamil: emailtestlotto777@gmail.com
+  Password: pch73
+
+########
+# PROD #
+########
+PROD:
+  AppURL: www.google.com
+  Eamil: emailtestlotto777@gmail.com
+  Password: pch78963

@@ -1,0 +1,10 @@
+DEV
+TQA : {AppURL=www.google.com, Eamil=emailtestlotto777@gmail.com, Password=pch78963}
+USTG : {AppURL=www.google.com, Eamil=emailtestlotto777@gmail.com, Password=pch78963}
+UINT : {AppURL=www.google.com, Eamil=emailtestlotto777@gmail.com, Password=pch78963}
+RDEV : {AppURL=www.google.com, Eamil=emailtestlotto777@gmail.com, Password=pch73}
+VPROD : {AppURL=www.google.com, Eamil=emailtestlotto777@gmail.com, Password=pch78963}
+DEV
+AppURL : www.google.com
+%Eamil : emailtestlotto777@gmail.com
+Password : pch73

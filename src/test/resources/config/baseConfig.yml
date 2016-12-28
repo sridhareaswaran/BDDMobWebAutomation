@@ -1,0 +1,3 @@
+---
+# Choose the ENV to be tested (QA,DEV,STG,INT,PROD)
+TestEnvironment: DEV
