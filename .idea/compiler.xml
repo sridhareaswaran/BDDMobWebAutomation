@@ -21,8 +21,6 @@
     <bytecodeTargetLevel>
       <module name="BDDMobileAutomation_main" target="1.8" />
       <module name="BDDMobileAutomation_test" target="1.8" />
-      <module name="LottoMobileAutomation_main" target="1.8" />
-      <module name="LottoMobileAutomation_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
