@@ -3,7 +3,7 @@
 # QA #
 ######
 QA:
-  AppURL: www.google.com
+  AppURL: www.duckduckgo.com
   Eamil: test777@gmail.com
   Password: testpwd
 
@@ -11,7 +11,7 @@ QA:
 # Staging #
 ###########
 STG:
-  AppURL: www.google.com
+  AppURL: www.duckduckgo.com
   Eamil: test777@gmail.com
   Password: testpwd
 
@@ -19,7 +19,7 @@ STG:
 # Integration #
 ###############
 INT:
-  AppURL: www.google.com
+  AppURL: www.duckduckgo.com
   Eamil: test777@gmail.com
   Password: testpwd
 
@@ -27,7 +27,7 @@ INT:
 # DEV #
 #######
 DEV:
-  AppURL: www.google.com
+  AppURL: www.duckduckgo.com
   Eamil: test777@gmail.com
   Password: testpwd
 
@@ -35,6 +35,6 @@ DEV:
 # PROD #
 ########
 PROD:
-  AppURL: www.google.com
+  AppURL: www.duckduckgo.com
   Eamil: test777@gmail.com
   Password: testpwd

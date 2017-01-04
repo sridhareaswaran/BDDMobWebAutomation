@@ -1,0 +1,174 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Text Search",
+        "description": "",
+        "id": "text-search;text-search",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1837200583,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am in duckduckgo homepage",
+            "match": {
+              "location": "SearchStepdef.i_am_in_duckduckgo_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5781209,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search for \"Elon Musk\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Elon Musk",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchStepdef.i_search_for(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 24561,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should see text results",
+            "match": {
+              "location": "SearchStepdef.i_should_see_text_results()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 78347,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should see \"Elon Mush\" in page source",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Elon Mush",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchStepdef.i_should_see_in_page_source(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Text Search",
+    "description": "test duckduckgo text feature",
+    "id": "text-search",
+    "keyword": "Feature",
+    "uri": "Search.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Search for breaking bad images",
+        "description": "",
+        "id": "image-search;search-for-breaking-bad-images",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 137418,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am in duckduckgo homepage",
+            "match": {
+              "location": "SearchStepdef.i_am_in_duckduckgo_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 86120,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I search for \"breaking bad\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "breaking bad",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchStepdef.i_search_for(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3186427,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Click on Image button",
+            "match": {
+              "location": "SearchStepdef.click_on_Image_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 32023,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should see image results",
+            "match": {
+              "location": "SearchStepdef.i_should_see_image_results()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 167265,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should see \"breaking bad\" in page source",
+            "match": {
+              "arguments": [
+                {
+                  "val": "breaking bad",
+                  "offset": 14
+                }
+              ],
+              "location": "SearchStepdef.i_should_see_in_page_source(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Image Search",
+    "description": "test duckduckgo image feature",
+    "id": "image-search",
+    "keyword": "Feature",
+    "uri": "imgSearch.feature"
+  }
+]

@@ -19,14 +19,18 @@ dependencies {
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.3.11'
     compile group: 'io.magentys', name: 'donut', version: '0.0.4'
     compile group: 'org.yaml', name: 'snakeyaml', version: '1.17'
-    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
     compile group: 'info.cukes', name: 'cucumber-jvm-deps', version: '1.0.5'
-    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.4'
-    compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.4'
+    compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-testng', version: '1.2.5'
+    compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
     compile group: 'io.appium', name: 'java-client', version: '4.1.2'
     compile group: 'com.codeborne', name: 'selenide', version: '4.2'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.0.1'
+    compile group: 'com.vimalselvam', name: 'cucumber-extentsreport', version: '1.1.1'
 
     testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile group: 'org.testng', name: 'testng', version: '6.1.1'
 }
 
 idea {
@@ -35,3 +39,20 @@ idea {
         downloadJavadoc = true
     }
 }
+
+test {
+    useTestNG()
+    scanForTestClasses = false
+    include '**/*'
+    testLogging.showStandardStreams = true
+}
+
+
+/*
+task prettyReport(type: Exec) {
+    commandLine 'java', '-jar', 'C:/Users/sridhar.easwaran/Desktop/lab/BDDMobileAutomation/src/main/resources/donut-0.0.3-one-jar.jar',
+            '-s', 'C:/Users/sridhar.easwaran/Desktop/lab/BDDMobileAutomation/target',
+            '--projectName', 'Sri-Cucu'
+}
+
+build.finalizedBy(prettyReport)*/
