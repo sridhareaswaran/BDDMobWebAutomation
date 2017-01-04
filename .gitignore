@@ -21,6 +21,7 @@
 # Folder:
 log/
 target/
+output/
 
 # Gradle:
 .idea/gradle.xml
