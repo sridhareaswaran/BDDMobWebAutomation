@@ -61,7 +61,6 @@ modules.xml
 .idea/misc.xml
 *.ipr
 
-
 ### Gradle ###
 .gradle
 /build/
