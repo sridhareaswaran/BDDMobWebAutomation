@@ -8,11 +8,11 @@ import org.openqa.selenium.By;
  */
 public class HomeScreen {
 
-    By SearchBox= new By.ById("search_form_input_homepage");
-    By SearchButton= new By.ById("search_button_homepage");
-    By HomePageLogo= new By.ByCssSelector("a.logo_homepage");
+    By SearchBox = new By.ById("search_form_input_homepage");
+    By SearchButton = new By.ById("search_button_homepage");
+    By HomePageLogo = new By.ByCssSelector("a.logo_homepage");
 
-    public void visit(){
+    public void visit() {
 
     }
 }

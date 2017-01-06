@@ -5,3 +5,8 @@ TestEnvironment: DEV
 # Run tests in (localDevices, remote)
 RunTestsIn: localDevices
 
+Appium_JS_Path:
+
+# Select device interested to test (Android, iOS)
+DEVICE: Android
+

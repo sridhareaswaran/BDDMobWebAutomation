@@ -1,24 +1,24 @@
 package org.sri.app.runner;
 
-import com.cucumber.listener.ExtentCucumberFormatter;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.MobileCapabilityType;
-import io.magentys.donut.gherkin.Generator;
-import io.magentys.donut.gherkin.model.ReportConsole;
 import org.junit.runner.RunWith;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.sri.app.appium.AppiumService;
+import org.sri.app.appium.AppiumManager;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeMethod;
 
-import java.io.File;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.HashMap;
-import java.util.Map;
+import static org.sri.app.appium.AppiumManager.getDriver;
+import static org.sri.app.appium.AppiumManager.storeAllConnectedDevices;
+import static org.sri.app.utils.configReader.initConfigReader;
+import static org.sri.app.utils.logManager.initLogManager;
+import static org.sri.app.utils.reportManager.initExtentCucumberReport;
+import static org.sri.app.utils.logManager.log;
 
 /**
  * Created by sridhar.easwaran on 12/28/2016.
@@ -31,48 +31,54 @@ import java.util.Map;
         glue = "org.sri.app.stepdef",
         tags = {},
         format = {
-                    "html:target/cucumber-html-report",
-                    "json:target/cucumber-json-report.json"
-                 },
+                "html:target/cucumber-html-report",
+                "json:target/cucumber-json-report.json"
+        },
         plugin = {
                 "pretty",
                 "com.cucumber.listener.ExtentCucumberFormatter"
-                 }
+        }
 )
-public class TestRunner extends AbstractTestNGCucumberTests{
+public class TestRunner extends AbstractTestNGCucumberTests {
 
     private AndroidDriver driver;
 
     @BeforeClass
-    public AppiumDriver getDriver() throws MalformedURLException {
+    public void setup() throws Exception {
 
-        // Initiates the extent report and generates the output in the output/Run_<unique timestamp>/report.html file by default.
-        ExtentCucumberFormatter.initiateExtentCucumberFormatter();
+        //configure the logManager
+        initLogManager();
 
-        // Loads the extent config xml to customize on the report.
-        ExtentCucumberFormatter.loadConfig(new File("src/test/resources/extent-config.xml"));
+        initConfigReader();
 
-        // User can add the system information as follows
-        ExtentCucumberFormatter.addSystemInfo("Browser Name", "Firefox");
-        ExtentCucumberFormatter.addSystemInfo("Browser version", "v31.0");
-        ExtentCucumberFormatter.addSystemInfo("Selenium version", "v2.53.0");
+        initExtentCucumberReport();
 
-        // Also you can add system information using a hash map
-        Map systemInfo = new HashMap();
-        systemInfo.put("Cucumber version", "v1.2.3");
-        systemInfo.put("Extent Cucumber Reporter version", "v1.1.1");
-        ExtentCucumberFormatter.addSystemInfo(systemInfo);
+        storeAllConnectedDevices();
 
-        DesiredCapabilities androidWebCaps = new DesiredCapabilities();
-        androidWebCaps.setCapability(MobileCapabilityType.DEVICE_NAME, "sri");
-        androidWebCaps.setCapability(MobileCapabilityType.BROWSER_NAME, "chrome");
+        AppiumService.start();
 
-        androidWebCaps.setCapability(MobileCapabilityType.UDID, "ZY2225CDCR");
-        androidWebCaps.setCapability(MobileCapabilityType.TAKES_SCREENSHOT, true);
-        AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), androidWebCaps);
-        System.out.println("i am here");
-        return driver;
+        log.info("hi from logManager");
+    }
 
+
+    @AfterClass
+    public void tearDown() {
+
+        AppiumService.stop();
+        log.info("after - class");
+    }
+
+    @BeforeMethod()
+    public void setupDriver() throws Exception {
+        log.info("before - method");
+       // createDriverInstance();
+    }
+
+
+    @AfterMethod()
+    public void killDriverInstance(ITestResult result) {
+        //getDriver().quit();
+        log.info("after - method");
     }
 
 }

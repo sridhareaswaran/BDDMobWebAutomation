@@ -11,7 +11,7 @@ public class ResultsScreen {
 
     By resultsWrapper = new By.ByCssSelector("div#links_wrapper");
 
-    public void is_ResultsWrapper_Displayed(){
+    public void is_ResultsWrapper_Displayed() {
         $(resultsWrapper).isDisplayed();
     }
 }

@@ -13,7 +13,7 @@ public class SearchStepdef {
 
     @Given("^I am in duckduckgo homepage$")
     public void i_am_in_duckduckgo_homepage() {
-        System.out.println("i am here ccc");
+        Assert.assertEquals(1, 1);
     }
 
     @When("^I search for \"([^\"]*)\"$")
@@ -38,7 +38,7 @@ public class SearchStepdef {
     public void click_on_Image_button() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         //throw new PendingException();
-        Assert.assertEquals(1,1);
+        Assert.assertEquals(1, 1);
     }
 
     @Then("^I should see image results$")

@@ -4,6 +4,6 @@
         <encoding>UTF-8</encoding>
         <documentTitle>Cucumber Extent Reports sri - v1.0.0</documentTitle>
         <reportName>Sri Extent Reports</reportName>
-        <reportHeadline> - v1.0.0</reportHeadline>
+        <reportHeadline>- v1.0.0</reportHeadline>
     </configuration>
 </extentreports>

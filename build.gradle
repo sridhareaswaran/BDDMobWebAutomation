@@ -19,6 +19,7 @@ dependencies {
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.3.11'
     compile group: 'io.magentys', name: 'donut', version: '0.0.4'
     compile group: 'org.yaml', name: 'snakeyaml', version: '1.17'
+    compile group: 'log4j', name: 'log4j', version: '1.2.17'
     compile group: 'info.cukes', name: 'cucumber-core', version: '1.2.5'
     compile group: 'info.cukes', name: 'cucumber-jvm-deps', version: '1.0.5'
     compile group: 'info.cukes', name: 'cucumber-java', version: '1.2.5'
@@ -46,7 +47,6 @@ test {
     include '**/*'
     testLogging.showStandardStreams = true
 }
-
 
 /*
 task prettyReport(type: Exec) {
